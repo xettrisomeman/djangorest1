@@ -31,11 +31,11 @@ class CustomUser(AbstractUser):
 class Cast(models.Model):
     Actor = 'A+'
     Actress = 'A'
-    CAST = (
+    CASTCHOICE = (
         (Actor , 'Actor'),
         (Actress , 'Actress')
     )
-    category = models.CharField(choices=CAST , default=Actor, max_length=50)
+    category = models.CharField(choices=CASTCHOICE , default=Actor, max_length=50)
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     date_of_birth = models.DateField(auto_now=False, auto_now_add=False)
